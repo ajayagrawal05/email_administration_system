@@ -4,7 +4,8 @@
     Subject:
     <%= f.text_field :subject %><br>
     Body:
-    <%= f.text_area :body, size: "70x5" %><br>
+    <%= f.hidden_field :body, id: :body, value: @email.body, size: "70x5" %><br>
+    <trix-editor input="body"></trix-editor>
     Interval Between:
     <%= f.number_field :interval_between, min: 1 %><br>
     Frequency:
