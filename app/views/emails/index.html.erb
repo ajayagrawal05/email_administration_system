@@ -1,4 +1,5 @@
-<%= @emails.each do |email| %>
+<% @emails.each do |email| %>
   <h3><%= link_to email.name, email_path(email.id) %></h3><br>
+  <%= raw(email.body) %><br/>
 <% end %>
 <h1><%= link_to 'Create New Email', new_email_path %></h1>
