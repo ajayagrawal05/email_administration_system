@@ -1,2 +1,14 @@
 <%= form_with model: @email do |f| %>
+    Name:
+    <%= f.text_field :name %><br>
+    Subject:
+    <%= f.text_field :subject %><br>
+    Body:
+    <%= f.text_area :body, size: "70x5" %><br>
+    Interval Between:
+    <%= f.number_field :interval_between, min: 1 %><br>
+    Frequency:
+    <%= f.number_field :frequency, in: 1..5, min: 1 %><br>
+
+    <%= f.submit 'Create' %>
 <% end %>

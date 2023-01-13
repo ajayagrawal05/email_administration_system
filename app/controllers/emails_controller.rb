@@ -1,17 +1,28 @@
 class EmailsController < ApplicationController
 
     def index
+      @emails = Email.all
     end
 
     def new
-      @email = []
+      @email = Email.new
     end
 
-    def ceate
+    def create
+      @email = Email.new(email_params)
+      if @email.save
+        redirect_to '/'
+      else
+        render 'new'
+      end
+    end
+
+    def show
     end
 
     private
     def email_params
+      params.require(:email).permit(:name, :subject, :body, :frequency, :interval_between)
     end
 
 end
