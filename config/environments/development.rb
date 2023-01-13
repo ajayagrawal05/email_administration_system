@@ -60,27 +60,27 @@ Rails.application.configure do
   config.assets.quiet = true
 
 
-  config.action_mailer.delivery_method = :sendmail
-  # Defaults to:
-  # config.action_mailer.sendmail_settings = {
-  #   location: '/usr/sbin/sendmail',
-  #   arguments: '-i'
-  # }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'no-reply@example.com'}
+  # config.action_mailer.delivery_method = :sendmail
+  # # Defaults to:
+  # # config.action_mailer.sendmail_settings = {
+  # #   location: '/usr/sbin/sendmail',
+  # #   arguments: '-i'
+  # # }
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default_options = {from: 'no-reply@example.com'}
 
-  Then copy and paste this next part, which is specific for Gmail:
+  # Then copy and paste this next part, which is specific for Gmail:
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'example.com',
-  user_name:            '<username>',
-  password:             '<password>',
-  authentication:       'plain',
-  enable_starttls_auto: true  }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  # address:              'smtp.gmail.com',
+  # port:                 587,
+  # domain:               'example.com',
+  # user_name:            '<username>',
+  # password:             '<password>',
+  # authentication:       'plain',
+  # enable_starttls_auto: true  }
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

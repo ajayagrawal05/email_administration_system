@@ -70,4 +70,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem "sidekiq"
+gem 'sidekiq', '6.1.1'
+gem "sidekiq-cron", "~> 1.1"
+gem 'sidekiq-unique-jobs'

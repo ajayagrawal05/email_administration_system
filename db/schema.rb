@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_13_061104) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_13_171724) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "email_logs", force: :cascade do |t|
+    t.integer "email_id"
+    t.integer "user_id"
+    t.string "sidekiq_id"
+    t.integer "frequency_count", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "emails", force: :cascade do |t|
     t.string "name"

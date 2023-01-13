@@ -1,0 +1,7 @@
+---
+:concurrency: 7
+:queues:
+  - mailers
+  - default
+development:
+  :verbose: true
