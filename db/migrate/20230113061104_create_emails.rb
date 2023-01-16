@@ -3,7 +3,7 @@ class CreateEmails < ActiveRecord::Migration[7.0]
     create_table :emails do |t|
       t.string :name
       t.string :subject
-      t.string :type
+      t.string :email_type
       t.integer :interval_between
       t.integer :frequency
       t.text :body

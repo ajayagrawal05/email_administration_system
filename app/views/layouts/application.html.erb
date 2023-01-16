@@ -3,6 +3,7 @@
   <head>
     <title>EmailAdministrationSystem</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
       <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
     <%= csrf_meta_tags %>
@@ -13,6 +14,8 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container p-32 ">
+      <%= yield %>
+    </div>
   </body>
 </html>

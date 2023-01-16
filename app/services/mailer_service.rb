@@ -7,9 +7,9 @@ class MailerService
     end
   
     def process!
-      if @email.type == "Transaction"
+      if @email.email_type == "Transaction"
         send_email
-      elsif @email.type == "Reminder"
+      elsif @email.email_type == "Reminder"
         schedule_reminder
       end
     end
