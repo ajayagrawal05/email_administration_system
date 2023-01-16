@@ -1,1 +1,1 @@
-<%= raw(@email.body) %>
+<%= raw(@email.body.gsub('%user_name%', @user&.name).gsub('%user_email%', @user&.email)) %>
