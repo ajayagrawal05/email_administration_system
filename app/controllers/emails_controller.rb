@@ -22,7 +22,7 @@ class EmailsController < ApplicationController
 
     private
     def email_params
-      params.require(:email).permit(:name, :subject, :body, :frequency, :interval_between)
+      params.require(:email).permit(:name, :subject, :body, :frequency, :interval_between, :email_type)
     end
 
 end

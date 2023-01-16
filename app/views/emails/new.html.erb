@@ -6,6 +6,7 @@
     Body:
     <%= f.hidden_field :body, id: :body, value: @email.body, size: "70x5" %><br>
     <trix-editor input="body" , class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-full mt-4' ></trix-editor>
+    <%= f.select :email_type, ['Transaction', 'Reminder'], class: 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-full mt-4' %>
     Interval Between:
     <%= f.number_field :interval_between, min: 1 %><br>
     Frequency:
