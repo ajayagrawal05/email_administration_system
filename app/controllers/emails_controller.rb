@@ -18,6 +18,7 @@ class EmailsController < ApplicationController
     end
 
     def show
+      @email = Email.find_by_id(params[:id])
     end
 
     private
