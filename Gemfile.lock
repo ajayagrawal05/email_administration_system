@@ -110,6 +110,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    kgio (2.11.4)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -138,8 +139,6 @@ GEM
       racc (~> 1.4)
     pg (1.4.5)
     public_suffix (5.0.1)
-    puma (5.6.5)
-      nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.6.2)
     rack (2.2.5)
@@ -171,6 +170,7 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0)
       zeitwerk (~> 2.5)
+    raindrops (0.20.1)
     rake (13.0.6)
     redis (4.8.0)
     regexp_parser (2.6.1)
@@ -212,6 +212,9 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    unicorn (6.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -239,7 +242,6 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   pg (~> 1.1)
-  puma (~> 5.0)
   rails (~> 7.0.4)
   redis (~> 4.0)
   selenium-webdriver
@@ -250,6 +252,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  unicorn
   web-console
   webdrivers
 
